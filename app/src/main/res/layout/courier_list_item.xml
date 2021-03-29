@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/courier_list_item_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:background="@color/grey_200"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/courier_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/courier_endpointid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EndpointId" />
+
+    <TextView
+        android:id="@+id/courier_bid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bid" />
+
+</LinearLayout>

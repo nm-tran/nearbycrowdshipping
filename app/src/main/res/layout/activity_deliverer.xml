@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".DelivererActivity">
+
+    <TextView
+        android:id="@+id/device_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deliverer:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/parcel_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Parcel:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/device_name_text" />
+
+    <TextView
+        android:id="@+id/destination_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="destination:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parcel_textview" />
+
+    <EditText
+        android:id="@+id/destination_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Welfengarten 1, 30167 Hannover"
+        app:layout_constraintBaseline_toBaselineOf="@id/destination_label"
+        app:layout_constraintStart_toEndOf="@+id/destination_label" />
+
+    <TextView
+        android:id="@+id/deadline_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="deadline:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destination_label" />
+
+    <EditText
+        android:id="@+id/deadline_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="17:00"
+        app:layout_constraintBaseline_toBaselineOf="@id/deadline_label"
+        app:layout_constraintStart_toEndOf="@+id/deadline_label" />
+
+    <TextView
+        android:id="@+id/meetingLocation_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="meeting location:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deadline_label" />
+
+    <EditText
+        android:id="@+id/meetingLocation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Ricklinger Stadtweg 120, 30459 Hannover"
+        app:layout_constraintBaseline_toBaselineOf="@id/meetingLocation_label"
+        app:layout_constraintStart_toEndOf="@id/meetingLocation_label" />
+
+    <TextView
+        android:id="@+id/meetingTime_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="meeting time:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meetingLocation_label" />
+
+    <EditText
+        android:id="@+id/meetingTime_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="14:00"
+        app:layout_constraintBaseline_toBaselineOf="@id/meetingTime_label"
+        app:layout_constraintStart_toEndOf="@id/meetingTime_label" />
+
+    <TextView
+        android:id="@+id/price_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="price(€):"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meetingTime_label" />
+
+    <EditText
+        android:id="@+id/price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number|text"
+        android:text="5"
+        app:layout_constraintBaseline_toBaselineOf="@id/price_label"
+        app:layout_constraintStart_toEndOf="@id/price_label" />
+
+    <Button
+        android:id="@+id/broadcastParcel"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="broadcastParcel"
+        android:text="broadcast parcel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_label" />
+
+    <TextView
+        android:id="@+id/courier_max_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Max Courier: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/broadcastParcel" />
+
+    <TextView
+        android:id="@+id/courier_max_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="null"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/courier_max_label"
+        app:layout_constraintStart_toEndOf="@id/courier_max_label"/>
+
+    <TextView
+        android:id="@+id/courier_list_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Couriers"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/courier_max_label" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/courier_list_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courier_list_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

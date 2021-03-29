@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NearbyCrowdshipping</string>
+    <string name="error_missing_permissions">Cannot start without required permissions</string>
+
+    <string name="action_advertise">Advertise</string>
+    <string name="action_discover">Discover</string>
+    <string name="action_disconnect">Disconnect</string>
+
+    <string name="button_launch_deliverer_activity">Deliverer</string>
+    <string name="button_launch_courier_activity">Courier</string>
+</resources>
